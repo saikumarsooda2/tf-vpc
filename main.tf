@@ -3,7 +3,7 @@ resource "aws_vpc" "main" {
 
  tags = merge(
    {
-   name = test},
+   name = aws_vpc},
 var.tags
  )
 }
