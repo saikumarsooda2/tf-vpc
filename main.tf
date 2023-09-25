@@ -1,5 +1,5 @@
 resource "aws_vpc" "main" {
-  cidr_block = var.vpc
+  cidr_block = var.cidr_block
 
  tags = merge({
    name = aws_vpc},
