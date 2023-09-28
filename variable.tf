@@ -3,5 +3,7 @@ variable "tags" {}
 variable "subnets" {}
 variable "env" {}
 variable "az" {
-  default = ["us-east-1a", "us-east-1b"]
+  string = {
+    default = ["us-east-1a", "us-east-1b"]
+  }
 }
