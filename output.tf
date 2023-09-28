@@ -1,4 +1,4 @@
 
 output "subnet_ids" {
-  value = "module.subnets"
+  value = module.subnets
 }
