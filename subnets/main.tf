@@ -6,5 +6,5 @@ resource "aws_subnet" "main" {
    tag = merge({
     Name = "${var.env}-${var.subnet_name}-subnet"
   },
-    var.tags)
+    var.tags["default"])
 }

@@ -1,10 +1,10 @@
 resource "aws_vpc" "main" {
   cidr_block         = var.cidr_block
   enable_dns_support = true
-  tag = merge({
+  tags = merge({
     Name = "${var.env}-vpc"
   },
-    var.tags)
+    var.tags["default"])
 }
 
 module "subnets" {
