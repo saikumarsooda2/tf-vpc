@@ -4,5 +4,5 @@ variable "subnets" {}
 variable "env" {}
 variable "az" {
 
-    default = "us-east-1"
+    default = ["us-east-1a", "us-east-1a"]
 }
