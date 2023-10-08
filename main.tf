@@ -26,3 +26,12 @@ resource "aws_vpc_peering_connection" "peer" {
   peer_vpc_id = var.default_vpc
   auto_accept = true
 }
+
+resource "aws_route_table" "example" {
+  vpc_id = aws_vpc.main.id
+
+  tags = merge({
+    Name = "${var.env}-vpc"
+  },
+    var.tags["default"])
+}
