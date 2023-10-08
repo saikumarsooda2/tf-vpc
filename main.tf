@@ -14,7 +14,7 @@ module "subnets" {
   cidr_block  = each.value["cidr_block"]
   subnet_name = each.key
 
-  vpc_id = aws_vpc.main.id
+  vpc = aws_vpc.main.id
 
   env  = var.env
   tags = var.tags
