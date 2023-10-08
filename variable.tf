@@ -7,3 +7,4 @@ variable "az" {
     default = ["us-east-1a", "us-east-1a"]
 }
 variable "default_vpc" {}
+variable "vpc" {}
