@@ -27,3 +27,12 @@ resource "aws_vpc_peering_connection" "peer" {
   auto_accept = true
 }
 
+
+
+data "aws_internet_gateway" "default" {
+  vpc_id = aws_vpc.main.id
+  tags = merge({
+    Name = "${var.env}-vpc"
+  },
+    var.tags["default"])
+}
